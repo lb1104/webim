@@ -1,0 +1,303 @@
+#webimwbox {
+    position: fixed;
+    right: 0;
+    z-index: 999;
+    height: 452px;
+    overflow: hidden;
+    _position: absolute;
+}
+
+#webimmin {
+    width: 33px;
+    height: 156px;
+    z-index: 1000;
+    background: url('../images/bgtx.png') no-repeat;
+    float: left;
+    cursor: pointer;
+}
+
+#webimbox {
+    float: left;
+    /*display: none;*/
+    width: 240px;
+    height: 450px;
+    border: 1px solid #ccc;
+    background: #fff;
+}
+
+#webim_top {
+    height: 60px;
+    padding: 10px;
+    border-bottom: 1px solid #ccc;
+}
+
+#webim_top dt {
+    float: left;
+    width: 50px;
+    height: 50px;
+    padding: 10px;
+}
+
+#webim_top dd {
+    height: 20px;
+    line-height: 20px;
+}
+
+#webim_lxr {
+    height: 20px;
+    line-height: 20px;
+    padding: 5px 0 5px 40px;
+    background: url('../images/lxr.jpg') no-repeat 15px 5px;
+
+}
+
+#webim_tree {
+    height: 330px;
+    overflow: auto;
+}
+
+#webim_dis {
+    padding: 10px;
+}
+
+.webim_msgbox textarea {
+    width: 98%;
+    height: 80px;
+}
+
+.webim_msgbox .im_btn {
+    padding: 0 10px;
+    height: 22px;
+    line-height: 22px;
+    margin: 4px 10px;
+    list-style: none;
+    border: 1px solid #ccc;
+    background: #f1f1f1;
+    display: inline-block;
+    cursor: pointer;
+}
+
+
+
+.webim_msg_ul {
+    padding: 5px;
+}
+
+.webim_msg_ul li p.t {
+    line-height: 1.5;
+    color: #0038fc;
+}
+
+.webim_msg_ul li p.m {
+    color: #0096a3;
+}
+
+.webim_msg_ul li div.info {
+    line-height: 1.5;
+    padding: 2px 2px 2px 15px;
+    background: url('../images/d.jpg') no-repeat 5px 10px;
+}
+
+.webim_msg_ul li div.info a {
+    color: #E91D2E;
+}
+
+
+
+.webim_msg_ul li p.alert {
+    line-height: 1.5;
+    padding: 2px 2px 2px 12px;
+    color: #666;
+}
+
+.im_error {
+    color: #666;
+}
+
+.im_role {
+    background: none;
+    width: 0;
+}
+
+.im_user {
+    background: url('../images/ren.jpg') no-repeat center center;
+}
+
+.im_user_online {
+    background: url('../images/ren1.jpg') no-repeat center center;
+}
+
+.im_online_text {
+    color: #0047dd;
+}
+
+
+
+/*tip*/
+
+.bubbleContainer {
+    background: url("../images/msgbubble_bg.png") no-repeat scroll 0 1px transparent;
+    cursor: move;
+    display: none;
+    font-family: tahoma;
+    height: 32px;
+    position: absolute;
+    width: 300px;
+    bottom:0;margin: 0 auto;
+    z-index: 200000;
+}
+.bubbleContainer .plus {
+    font-size: 10px;
+}
+.bubblePanel {
+    color: #FFFFFF;
+    cursor: auto;
+    height: 22px;
+    line-height: 20px;
+    margin: 5px 8px;
+}
+.bubblePanel .icon {
+    background: url("../images/msgbubble_icons.png?t=20111011001") no-repeat scroll 0 0 transparent;
+    display: block;
+    float: left;
+    height: 16px;
+    margin: 3px 4px 0;
+    vertical-align: middle;
+    width: 16px;
+}
+.bubblePanel .item {
+    cursor: pointer;
+}
+.bubblePanel .single {
+    background-position: 0 -16px;
+}
+.bubblePanel .group {
+    background-position: 0 -32px;
+}
+.bubblePanel .video {
+    background-position: 0 -80px;
+}
+.bubblePanel .system {
+    background-position: 0 0;
+}
+.bubblePanel .setting {
+    background-position: 0 -64px;
+    cursor: pointer;
+    float: right;
+    margin-top: 5px;
+}
+.bubblePanel .item .body {
+    color: #FFFFFF;
+    display: block;
+    float: left;
+    height: 20px;
+    margin-right: 20px;
+    overflow: hidden;
+    vertical-align: middle;
+    width: 170px;
+}
+.bubblePanel .item .content {
+    display: inline-block;
+    width: 20000px;
+}
+.bubblePanel .item .content a {
+    color: #FFFFFF;
+}
+.bubblePanel .item .count {
+    display: inline-block;
+    vertical-align: middle;
+}
+.bubbleMsgList {
+    background: url("../images/msgbubble_list_bg.png") no-repeat scroll 0 0 transparent;
+    cursor: default;
+    display: none;
+    height: 210px;
+    left: 10px;
+    position: absolute;
+    top: -210px;
+    width: 280px;
+}
+.bubbleMsgList h3 {
+    color: #FFFFFF;
+    font-size: 12px;
+    height: 24px;
+    line-height: 24px;
+    margin: 0;
+    padding: 0 0 0 12px;
+}
+.bubbleMsgList .bubbleMsgListInner {
+    background: url("../images/msgbubble_list_bg_inner.png") repeat-x scroll 0 0 #FFFFFF;
+    height: 180px;
+    margin: 0 auto;
+    width: 270px;
+}
+.bubbleMsgList .bubbleMsgListContainer {
+    height: 155px;
+    overflow-y: auto;
+}
+.bubbleMsgList .bubbleMsgButtons {
+    height: 20px;
+    padding: 3px 8px 0 12px;
+}
+.bubbleMsgButtons a {
+    text-decoration: none;
+}
+.bubbleMsgButtons a:hover {
+    text-decoration: underline;
+}
+.bubbleMsgButtons .cancelNotify {
+    float: left;
+}
+.bubbleMsgButtons .viewAll {
+    float: right;
+}
+.bubbleMsgList ul, .bubbleMsgList li {
+    list-style: none outside none;
+    margin: 0;
+    padding: 0;
+}
+.bubbleMsgList ul {
+    padding: 12px 5px 0;
+}
+.bubbleMsgListContainer a {
+    display: block;
+    padding: 3px 5px 3px 7px;
+    text-decoration: none;
+}
+.bubbleMsgListContainer a:hover {
+    background: none repeat scroll 0 0 #CBE7FC;
+}
+.bubbleMsgList .item {
+    cursor: pointer;
+}
+.bubbleMsgList .item .avatar {
+    height: 20px;
+    margin-right: 8px;
+    vertical-align: middle;
+    width: 20px;
+}
+html.ie9_0 .bubbleMsgList .item .avatar {
+    vertical-align: inherit;
+}
+.bubbleMsgList .item .system {
+    background: url("../images/msgbubble_system_avatar.png") no-repeat scroll 0 0 transparent;
+    display: inline-block;
+    height: 16px;
+    margin: 2px 8px 0 2px;
+    width: 16px;
+}
+.bubbleMsgList .item .count {
+    color: #45649E;
+    float: right;
+}
+.bubbleMsgList .item .content {
+    cursor: pointer;
+    display: inline-block;
+    overflow: hidden;
+    vertical-align: middle;
+    width: 170px;
+}
+.bubbleMsgList .item .content .contentInner {
+    display: block;
+    width: 20000px;
+}

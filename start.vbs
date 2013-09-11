@@ -1,0 +1,1 @@
+createobject("wscript.shell").run "cmd /c node run",0
