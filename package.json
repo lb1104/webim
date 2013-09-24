@@ -1,5 +1,5 @@
 {
-    "name": "im",
+    "name": "webim",
     "version": "0.0.1",
     "private": true,
     "scripts": {
@@ -11,6 +11,7 @@
         "express": "*",
         "mysql": "*",
         "php-unserialize": "*",
-        "socket.io": "*"
+        "socket.io": "*",
+        "node-windows":"*"
     }
 }
