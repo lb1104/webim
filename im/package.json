@@ -1,0 +1,16 @@
+{
+    "name": "im",
+    "version": "0.0.1",
+    "private": true,
+    "scripts": {
+        "start": "node run.js"
+    },
+    "dependencies": {
+        "dateformatter":"*",
+        "ejs": "*",
+        "express": "*",
+        "mysql": "*",
+        "php-unserialize": "*",
+        "socket.io": "*"
+    }
+}
