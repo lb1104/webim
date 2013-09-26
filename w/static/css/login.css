@@ -1,0 +1,20 @@
+/*通用*/
+body { font: 12px Arial,Verdana,Tahoma, "宋体";background:#2495bb;}
+
+
+a{ text-decoration: none; color: #20537A; }
+a:hover{ color:#000; }
+a img{ border:0;}
+
+table{border-collapse: collapse;}
+
+textarea{font-size: 12px;}
+
+/** 登录页面 **/
+
+#login_form img{ float:left; border:1px solid #9e9e9f; margin:0 0 0 10px; display:inline}
+#login_form input.txt{ height:25px; line-height:25px; font-size:12px; border:1px solid #0491c0;
+    width:160px; float:left;padding: 0 2px; }
+#login_form input.code{ width:65px;}
+
+#logininfo{color: #f00;padding-left: 15px;}
