@@ -1,66 +1,103 @@
-var wincmd = require('node-windows');
-var Service = require('node-windows').Service;
+var wincmd = require('node-windows'),
+    readline = require('readline'),
+    rl = readline.createInterface(process.stdin, process.stdout),
+    Service = require('node-windows').Service;
 
 var svc = new Service({
-	  name:'OAIMServer',
-	  description: 'OA IM Server',
-	  script: __dirname+'/run.js'
-	});
+    name: 'OAIMServer',
+    description: 'OA IM Server',
+    script: __dirname + '/run.js'
+});
 
-function install(){
+function install() {
 
-	if(svc.exists){
-		console.log('server repeat.');
-	}
+    if (svc.exists) {
+        console.log('The service is installed.');
+        rl.prompt();
+        return;
+    }
+    console.log('service installing....');
+    svc.on('install', function () {
+        svc.start();
+        console.log('install success.');
+        rl.prompt();
+    });
 
-	svc.on('install',function(){
-	  svc.start();
-	  console.log('install complete.');
-	});
-
-	svc.install();
+    svc.install();
 }
 
-function uninstall(){
+function uninstall() {
+    if (!svc.exists) {
+        console.log('The service is not installed.');
+        rl.prompt();
+        return;
+    }
+    console.log('service uninstalling....');
+    svc.on('uninstall', function () {
+        console.log('Uninstall success.');
+        console.log('The service exists: ', svc.exists);
+        rl.prompt();
+    });
 
-	svc.on('uninstall',function(){
-	  console.log('Uninstall complete.');
-	  console.log('The service exists: ',svc.exists);
-	});
-
-	svc.uninstall();
+    svc.uninstall();
 
 }
 
-wincmd.isAdminUser(function(isAdmin){
+function exists() {
+    if (!svc.exists) {
+        console.log('The service is not installed.');
+    } else {
+        console.log('The service is installed.');
+    }
+    rl.prompt();
+}
 
-  if (isAdmin) {
-    console.log('The user has administrative privileges.');
+wincmd.isAdminUser(function (isAdmin) {
 
-    process.stdin.resume();
-	process.stdin.setEncoding('utf8');
+    if (isAdmin) {
+        console.log(svc.name + " installation");
+        console.log("   \033[36m Please enter number or string!\033[0m");
+        console.log("    \033[31m 1 \033[0m:  install server");
+        console.log("    \033[32m 2 \033[0m:  uninstall server");
+        console.log("    \033[33m 3 \033[0m:  exists server");
+        console.log("    \033[35m 0 \033[0m:  exit");
 
-	console.log("输入1/2回车\n 	1:install\n 	2:unstall\n 	0:exit");
+        rl.setPrompt('> ');
+        rl.prompt();
 
-	process.stdin.on('data', function(chunk) {
+        rl.on('line',function (line) {
+            switch (line.trim()) {
+                case "1":
+                case "i":
+                case "install":
+                    install();
+                    break;
+                case "2":
+                case "u":
+                case "uninstall":
+                    uninstall();
+                    break;
+                case "3":
+                case "exists":
+                    exists();
+                    break;
+                case "0":
+                case "quit":
+                case "exit":
+                    rl.close();
+                    break;
+                default:
+                    console.log("not find " + line.trim());
+                    rl.prompt();
+                    break;
+            }
 
-		process.stdin.emit('end',{chunk:chunk});
+        }).on('close', function () {
+                process.exit(0);
+            });
 
-	});
-
-	process.stdin.on('end', function(data) {
-		//console.log('end'+data.chunk+"/a");
-		if(data.chunk=='1\r\n'){
-			install();
-		}
-		if(data.chunk=='2\r\n'){
-			uninstall();
-		}
-	});
-
-
-  } else {
-    console.log('NOT AN ADMIN');
-  }
+    } else {
+        console.log('NOT AN ADMIN');
+    }
 
 });

@@ -10,7 +10,7 @@ Target Server Type    : MYSQL
 Target Server Version : 50524
 File Encoding         : 65001
 
-Date: 2013-09-24 16:17:20
+Date: 2013-12-16 13:33:42
 */
 
 SET FOREIGN_KEY_CHECKS=0;
@@ -36,8 +36,10 @@ INSERT INTO `ci_sessions` VALUES ('172f2c221a56d2e9ab9310ba61db7e08', '127.0.0.1
 INSERT INTO `ci_sessions` VALUES ('23111a28020476d6741a716ef1d73ad3', '127.0.0.1', 'Mozilla/5.0 (Windows NT 6.2; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/29.0.1547.15 Safari/537.36', '1380004169', 'a:7:{s:9:\"user_data\";s:0:\"\";s:14:\"validationcode\";s:4:\"7uQa\";s:7:\"user_id\";s:1:\"4\";s:8:\"userRole\";N;s:9:\"userAcode\";s:10:\"0100010100\";s:10:\"user_uname\";s:5:\"admin\";s:13:\"user_realname\";s:15:\"超级管理员\";}');
 INSERT INTO `ci_sessions` VALUES ('385a35f537c3c12fdf9674fb0bb180d0', '127.0.0.1', 'Mozilla/5.0 (compatible; MSIE 10.0; Windows NT 6.2; WOW64; Trident/6.0; QQBrowser/7.4.14018.400)', '1380009125', 'a:7:{s:9:\"user_data\";s:0:\"\";s:14:\"validationcode\";s:4:\"CKLs\";s:7:\"user_id\";s:1:\"4\";s:8:\"userRole\";N;s:9:\"userAcode\";s:10:\"0100010100\";s:10:\"user_uname\";s:5:\"admin\";s:13:\"user_realname\";s:15:\"超级管理员\";}');
 INSERT INTO `ci_sessions` VALUES ('6dc12df47511527772789b6223d7ef9e', '127.0.0.1', 'Mozilla/5.0 (compatible; MSIE 10.0; Windows NT 6.2; WOW64; Trident/6.0)', '1380010311', 'a:7:{s:9:\"user_data\";s:0:\"\";s:14:\"validationcode\";s:4:\"NKV2\";s:7:\"user_id\";s:1:\"4\";s:8:\"userRole\";N;s:9:\"userAcode\";s:10:\"0100010100\";s:10:\"user_uname\";s:5:\"admin\";s:13:\"user_realname\";s:15:\"超级管理员\";}');
+INSERT INTO `ci_sessions` VALUES ('749e21f0c08bb2a2f837c658cf200a37', '127.0.0.1', 'Mozilla/5.0 (Windows NT 6.2; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/29.0.1547.57 Safari/537.36', '1382671866', 'a:7:{s:9:\"user_data\";s:0:\"\";s:14:\"validationcode\";s:4:\"n7Ad\";s:7:\"user_id\";s:1:\"4\";s:8:\"userRole\";N;s:9:\"userAcode\";s:10:\"0100010100\";s:10:\"user_uname\";s:5:\"admin\";s:13:\"user_realname\";s:15:\"超级管理员\";}');
 INSERT INTO `ci_sessions` VALUES ('d5e3601a208bbd897bbd5d6edbacc78a', '127.0.0.1', 'Mozilla/5.0 (Windows NT 6.2; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/29.0.1547.15 Safari/537.36', '1380003959', 'a:8:{s:9:\"user_data\";s:0:\"\";s:14:\"validationcode\";s:4:\"LJ5D\";s:7:\"user_id\";s:1:\"4\";s:9:\"userPurvs\";s:1433:\"[\"10101\",\"10102\",\"10103\",\"10104\",\"10105\",\"10106\",\"10107\",\"10108\",\"10109\",\"10201\",\"10202\",\"10203\",\"10204\",\"10205\",\"10206\",\"10301\",\"10302\",\"10303\",\"10304\",\"10305\",\"10401\",\"10402\",\"10403\",\"10404\",\"10405\",\"10406\",\"10501\",\"10502\",\"10503\",\"10504\",\"10601\",\"10602\",\"10603\",\"10701\",\"10702\",\"10703\",\"10704\",\"10705\",\"10706\",\"10707\",\"10708\",\"10709\",\"10710\",\"10711\",\"10712\",\"10801\",\"10802\",\"10803\",\"10804\",\"10805\",\"10901\",\"10902\",\"10903\",\"10904\",\"10905\",\"10906\",\"11001\",\"11002\",\"11003\",\"11101\",\"11102\",\"11103\",\"11104\",\"11105\",\"11106\",\"11107\",\"11108\",\"11109\",\"11110\",\"11111\",\"11112\",\"11201\",\"11202\",\"11203\",\"11204\",\"11301\",\"11302\",\"11303\",\"11304\",\"11401\",\"11402\",\"11403\",\"11501\",\"11502\",\"11503\",\"11504\",\"11601\",\"11602\",\"11603\",\"11604\",\"11701\",\"11702\",\"11703\",\"11704\",\"11705\",\"11706\",\"11801\",\"11802\",\"11803\",\"11804\",\"11805\",\"11806\",\"11901\",\"11902\",\"11903\",\"11904\",\"12001\",\"12002\",\"12003\",\"12004\",\"12005\",\"12006\",\"12007\",\"12008\",\"12009\",\"12010\",\"12011\",\"12012\",\"12013\",\"12014\",\"12101\",\"12102\",\"12103\",\"12201\",\"12202\",\"12203\",\"12204\",\"12301\",\"12302\",\"12303\",\"12304\",\"12305\",\"12306\",\"12307\",\"12308\",\"12309\",\"12310\",\"12311\",\"12312\",\"12313\",\"12314\",\"12315\",\"12316\",\"12317\",\"12318\",\"12401\",\"12402\",\"12403\",\"12404\",\"12405\",\"12406\",\"12407\",\"12408\",\"12409\",\"12501\",\"12502\",\"12503\",\"12504\",\"12505\",\"12506\",\"12601\",\"12602\",\"12603\",\"12604\",\"12605\",\"12606\",\"12607\",\"12701\",\"12702\",\"12703\",\"12704\",\"12801\",\"12802\",\"12803\",\"20200\",\"20300\",\"20400\",\"30101\",\"99999\"]\";s:8:\"userRole\";s:1:\"1\";s:9:\"userAcode\";s:10:\"0100010100\";s:10:\"user_uname\";s:5:\"admin\";s:13:\"user_realname\";s:15:\"超级管理员\";}');
 INSERT INTO `ci_sessions` VALUES ('febc9bd2309aec70cee93d707f1709e1', '127.0.0.1', 'Mozilla/5.0 (Windows NT 6.2; WOW64; rv:22.0) Gecko/20100101 Firefox/22.0', '1380006464', 'a:7:{s:9:\"user_data\";s:0:\"\";s:14:\"validationcode\";s:4:\"UBAs\";s:7:\"user_id\";s:1:\"4\";s:8:\"userRole\";N;s:9:\"userAcode\";s:10:\"0100010100\";s:10:\"user_uname\";s:5:\"admin\";s:13:\"user_realname\";s:15:\"超级管理员\";}');
+INSERT INTO `ci_sessions` VALUES ('ff99c2039bff4d96a13f06312deea500', '127.0.0.1', 'Mozilla/5.0 (Windows NT 6.3; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/31.0.1650.57 Safari/537.36', '1387171841', 'a:7:{s:9:\"user_data\";s:0:\"\";s:14:\"validationcode\";s:4:\"kwHc\";s:7:\"user_id\";s:1:\"4\";s:8:\"userRole\";N;s:9:\"userAcode\";s:10:\"0100010100\";s:10:\"user_uname\";s:5:\"admin\";s:13:\"user_realname\";s:15:\"超级管理员\";}');
 
 -- ----------------------------
 -- Table structure for `department`
@@ -61,6 +63,92 @@ INSERT INTO `department` VALUES ('5', '1', '街道领导', '2013-09-24 15:06:08'
 INSERT INTO `department` VALUES ('1', '0', '街道', '2013-09-24 15:04:57', '1');
 
 -- ----------------------------
+-- Table structure for `jiawan`
+-- ----------------------------
+DROP TABLE IF EXISTS `jiawan`;
+CREATE TABLE `jiawan` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `guid` char(38) DEFAULT NULL,
+  `uuid` char(38) DEFAULT NULL,
+  `cid` varchar(10) DEFAULT NULL COMMENT '设备id',
+  `name` varchar(50) DEFAULT NULL COMMENT '设备名称',
+  `number` varchar(50) DEFAULT NULL COMMENT '编号',
+  `size` varchar(30) DEFAULT NULL COMMENT '尺寸',
+  `model` varchar(30) DEFAULT NULL COMMENT '型号',
+  `jwd` varchar(30) DEFAULT NULL COMMENT '经纬度',
+  `cqunit` varchar(80) DEFAULT NULL COMMENT '产权单位',
+  `gouzhidate` varchar(10) DEFAULT NULL COMMENT '购置安装日期',
+  `jianyandate` varchar(10) DEFAULT NULL COMMENT '检验日期',
+  `youxiaoqi` varchar(10) DEFAULT NULL COMMENT '有效期',
+  `lxr` varchar(100) DEFAULT NULL COMMENT '联系人',
+  `phone` varchar(100) DEFAULT NULL COMMENT '电话',
+  `sms_send` tinyint(1) DEFAULT '0' COMMENT '是否短信通知',
+  `address` varchar(200) DEFAULT NULL COMMENT '地址',
+  `note` text COMMENT '备注',
+  `state` tinyint(1) DEFAULT '0' COMMENT '状态',
+  `value` int(11) DEFAULT '0' COMMENT '值(浓度)',
+  `newest` tinyint(1) NOT NULL DEFAULT '1',
+  `timestamp` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
+  `lng` decimal(8,4) DEFAULT NULL COMMENT '坐标lng',
+  `lat` decimal(8,4) DEFAULT NULL COMMENT '坐标lat',
+  `dlng` double DEFAULT NULL COMMENT '地理经度',
+  `dlat` double DEFAULT NULL COMMENT '地理纬度',
+  `dheight` double DEFAULT NULL COMMENT '地理海拔高度',
+  PRIMARY KEY (`id`),
+  KEY `guid` (`guid`) USING BTREE,
+  KEY `uuid` (`uuid`) USING BTREE,
+  KEY `cid` (`cid`) USING BTREE,
+  KEY `newest` (`newest`) USING BTREE
+) ENGINE=MyISAM AUTO_INCREMENT=16 DEFAULT CHARSET=utf8 ROW_FORMAT=DYNAMIC;
+
+-- ----------------------------
+-- Records of jiawan
+-- ----------------------------
+
+-- ----------------------------
+-- Table structure for `jingai`
+-- ----------------------------
+DROP TABLE IF EXISTS `jingai`;
+CREATE TABLE `jingai` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `guid` char(38) DEFAULT NULL,
+  `uuid` char(38) DEFAULT NULL,
+  `cid` varchar(10) DEFAULT NULL COMMENT '设备id',
+  `name` varchar(50) DEFAULT NULL COMMENT '设备名称',
+  `number` varchar(50) DEFAULT NULL COMMENT '编号',
+  `size` varchar(30) DEFAULT NULL COMMENT '尺寸',
+  `model` varchar(30) DEFAULT NULL COMMENT '型号',
+  `jwd` varchar(30) DEFAULT NULL COMMENT '经纬度',
+  `cqunit` varchar(80) DEFAULT NULL COMMENT '产权单位',
+  `gouzhidate` varchar(10) DEFAULT NULL COMMENT '购置安装日期',
+  `jianyandate` varchar(10) DEFAULT NULL COMMENT '检验日期',
+  `youxiaoqi` varchar(10) DEFAULT NULL COMMENT '有效期',
+  `lxr` varchar(100) DEFAULT NULL COMMENT '联系人',
+  `phone` varchar(100) DEFAULT NULL COMMENT '电话',
+  `sms_send` tinyint(1) DEFAULT '0' COMMENT '是否短信通知',
+  `address` varchar(200) DEFAULT NULL COMMENT '地址',
+  `note` text COMMENT '备注',
+  `state` tinyint(1) DEFAULT '0' COMMENT '状态',
+  `value` int(10) DEFAULT '0' COMMENT '值',
+  `newest` tinyint(1) NOT NULL DEFAULT '1',
+  `timestamp` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
+  `lng` decimal(8,4) DEFAULT NULL COMMENT '坐标lng',
+  `lat` decimal(8,4) DEFAULT NULL COMMENT '坐标lat',
+  `dlng` double DEFAULT NULL COMMENT '地理经度',
+  `dlat` double DEFAULT NULL COMMENT '地理纬度',
+  `dheight` double DEFAULT NULL COMMENT '地理海拔高度',
+  PRIMARY KEY (`id`),
+  KEY `guid` (`guid`),
+  KEY `uuid` (`uuid`),
+  KEY `cid` (`cid`) USING BTREE,
+  KEY `newest` (`newest`) USING BTREE
+) ENGINE=MyISAM AUTO_INCREMENT=8 DEFAULT CHARSET=utf8 COMMENT='井盖';
+
+-- ----------------------------
+-- Records of jingai
+-- ----------------------------
+
+-- ----------------------------
 -- Table structure for `oa_im_msg`
 -- ----------------------------
 DROP TABLE IF EXISTS `oa_im_msg`;
@@ -72,7 +160,7 @@ CREATE TABLE `oa_im_msg` (
   `msg` text COMMENT '消息内容',
   `fujian` text COMMENT '附件json',
   PRIMARY KEY (`id`)
-) ENGINE=MyISAM AUTO_INCREMENT=7 DEFAULT CHARSET=utf8 ROW_FORMAT=DYNAMIC COMMENT='通讯IM';
+) ENGINE=MyISAM AUTO_INCREMENT=8 DEFAULT CHARSET=utf8 ROW_FORMAT=DYNAMIC COMMENT='通讯IM';
 
 -- ----------------------------
 -- Records of oa_im_msg
@@ -83,6 +171,7 @@ INSERT INTO `oa_im_msg` VALUES ('3', '24', '测试人员', '测试人员 - 2013-
 INSERT INTO `oa_im_msg` VALUES ('4', '4', '超级管理员', '超级管理员 - 2013-09-24 16:13:03', '112', '\"\"');
 INSERT INTO `oa_im_msg` VALUES ('5', '4', '超级管理员', '超级管理员 - 2013-09-24 16:13:15', '1545', '\"\"');
 INSERT INTO `oa_im_msg` VALUES ('6', '24', '测试人员', '测试人员 - 2013-09-24 16:13:22', 'asd', '\"\"');
+INSERT INTO `oa_im_msg` VALUES ('7', '4', '超级管理员', '超级管理员 - 2013-10-25 11:41:59', '1212', '\"\"');
 
 -- ----------------------------
 -- Table structure for `oa_im_msg_js`
@@ -99,7 +188,7 @@ CREATE TABLE `oa_im_msg_js` (
   KEY `sid` (`sid`) USING BTREE,
   KEY `jsid` (`jsid`) USING BTREE,
   KEY `fcid` (`fcid`) USING BTREE
-) ENGINE=MyISAM AUTO_INCREMENT=7 DEFAULT CHARSET=utf8 ROW_FORMAT=FIXED;
+) ENGINE=MyISAM AUTO_INCREMENT=8 DEFAULT CHARSET=utf8 ROW_FORMAT=FIXED;
 
 -- ----------------------------
 -- Records of oa_im_msg_js
@@ -110,6 +199,35 @@ INSERT INTO `oa_im_msg_js` VALUES ('3', '3', '4', '24', '1', '1380010376');
 INSERT INTO `oa_im_msg_js` VALUES ('4', '4', '24', '4', '1', '1380010383');
 INSERT INTO `oa_im_msg_js` VALUES ('5', '5', '24', '4', '1', '1380010395');
 INSERT INTO `oa_im_msg_js` VALUES ('6', '6', '4', '24', '1', '1380010402');
+INSERT INTO `oa_im_msg_js` VALUES ('7', '7', '4', '4', '1', '1382672519');
+
+-- ----------------------------
+-- Table structure for `sensor`
+-- ----------------------------
+DROP TABLE IF EXISTS `sensor`;
+CREATE TABLE `sensor` (
+  `id` int(10) NOT NULL AUTO_INCREMENT,
+  `ty` varchar(50) DEFAULT NULL COMMENT '传感器类型jg,jw',
+  `cid` tinyint(4) DEFAULT NULL COMMENT '设备id',
+  `state` varchar(10) DEFAULT NULL COMMENT '状态值',
+  `value` varchar(50) DEFAULT NULL COMMENT '值',
+  `bjtime` varchar(50) DEFAULT NULL COMMENT '报警时间',
+  `dateline` int(11) DEFAULT NULL COMMENT '时间',
+  `ip` varchar(20) DEFAULT NULL COMMENT 'ip',
+  `clstate` tinyint(1) DEFAULT '0' COMMENT '处理状态',
+  `bjstate` tinyint(1) DEFAULT '0' COMMENT '报警状态 1',
+  `cidtrue` tinyint(1) DEFAULT '0' COMMENT '设备数据存在',
+  PRIMARY KEY (`id`)
+) ENGINE=MyISAM AUTO_INCREMENT=412 DEFAULT CHARSET=utf8 ROW_FORMAT=DYNAMIC;
+
+-- ----------------------------
+-- Records of sensor
+-- ----------------------------
+INSERT INTO `sensor` VALUES ('407', '井盖', '1', '打开', '0', '2013-10-25 11:32:34', '1382671954', '127.0.0.1', '0', '1', '0');
+INSERT INTO `sensor` VALUES ('408', '井盖', '1', '打开', '0', '2013-10-25 11:34:09', '1382672049', '127.0.0.1', '0', '1', '0');
+INSERT INTO `sensor` VALUES ('409', '井盖', '1', '打开', '0', '2013-10-25 13:05:19', '1382677519', '127.0.0.1', '0', '1', '0');
+INSERT INTO `sensor` VALUES ('410', '井盖', '1', '打开', '0', '2013-10-25 13:06:35', '1382677595', '127.0.0.1', '0', '1', '0');
+INSERT INTO `sensor` VALUES ('411', '井盖', '1', '打开', '0', '2013-10-25 13:21:12', '1382678472', '127.0.0.1', '0', '1', '0');
 
 -- ----------------------------
 -- Table structure for `user`
@@ -138,14 +256,15 @@ CREATE TABLE `user` (
   `shenfen` varchar(50) DEFAULT NULL,
   `type` int(4) DEFAULT NULL COMMENT '人员类型 字节位表示(在职员工|系统用户)',
   `note` varchar(200) DEFAULT NULL COMMENT '描述',
+  `sort` int(11) DEFAULT NULL,
   PRIMARY KEY (`id`)
 ) ENGINE=MyISAM AUTO_INCREMENT=138 DEFAULT CHARSET=utf8 COMMENT='系统用户表';
 
 -- ----------------------------
 -- Records of user
 -- ----------------------------
-INSERT INTO `user` VALUES ('4', 'admin', 'f6fdffe48c908deb0f4c3bd36c032e72', '1', '超级管理员', '男', '全能', '1', '2', '', '2013-09-24 15:05:42', '', '0100010100', null, null, null, null, null, null, null, '1', '');
-INSERT INTO `user` VALUES ('24', 'test', '05a671c66aefea124cc08b76ea6d30bb', '5,23', '测试人员', '男', '测试', '1', '3', null, '2013-09-24 15:57:58', '', '0100010100', null, null, null, null, null, null, null, '1', null);
-INSERT INTO `user` VALUES ('25', 'adm', 'fa61db9a31f047795b62b65ac357cb14', '1', '他啊是', '男', '经理', '1', '5', null, '2013-09-24 15:58:41', null, '0100010100', '', '', '', '', '', '', '', '3', null);
-INSERT INTO `user` VALUES ('26', 'jq', 'a50554c58053241cb99031d78a4cd049', '1', '阿斯顿', '女', '工程师', '1', '5', null, '2013-09-24 15:58:45', null, '0100010100', '', '', '', '', '', '', '', '3', null);
-INSERT INTO `user` VALUES ('27', 'lj', 'e14e3304e11894a5c27acea365588cf5', '1', '大的', '男', '工程师', '1', '2', null, '2013-09-24 15:58:24', '', '0100010100', null, null, null, null, null, null, null, '1', null);
+INSERT INTO `user` VALUES ('4', 'admin', 'f6fdffe48c908deb0f4c3bd36c032e72', '1', '超级管理员', '男', '全能', '1', '2', '', '2013-09-24 15:05:42', '', '0100010100', null, null, null, null, null, null, null, '1', '', null);
+INSERT INTO `user` VALUES ('24', 'test', '05a671c66aefea124cc08b76ea6d30bb', '5,23', '测试人员', '男', '测试', '1', '3', null, '2013-09-24 15:57:58', '', '0100010100', null, null, null, null, null, null, null, '1', null, null);
+INSERT INTO `user` VALUES ('25', 'adm', 'fa61db9a31f047795b62b65ac357cb14', '1', '他啊是', '男', '经理', '1', '5', null, '2013-09-24 15:58:41', null, '0100010100', '', '', '', '', '', '', '', '3', null, null);
+INSERT INTO `user` VALUES ('26', 'jq', 'a50554c58053241cb99031d78a4cd049', '1', '阿斯顿', '女', '工程师', '1', '5', null, '2013-09-24 15:58:45', null, '0100010100', '', '', '', '', '', '', '', '3', null, null);
+INSERT INTO `user` VALUES ('27', 'lj', 'e14e3304e11894a5c27acea365588cf5', '1', '大的', '男', '工程师', '1', '2', null, '2013-09-24 15:58:24', '', '0100010100', null, null, null, null, null, null, null, '1', null, null);

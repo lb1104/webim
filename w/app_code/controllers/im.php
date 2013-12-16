@@ -6,27 +6,18 @@ class Im extends MY_Controller
     function index()
     {
 
-        //sms center
+        $port = '8081';//设置websocket端口
 
-        $configsmshost = config_item('smshost');
-        $ip = $this->input->get_post('ip', true);
-        $purl = parse_url($configsmshost);
-        $smshost = 'http://' . $ip . ':' . $purl['port'];
-        $im = @file_get_contents($smshost . '/i');
+        $ip = $this->input->get_post('ip', true);//接收ip
+
+        $smshost = 'http://' . $ip . ':' . $port;
+        $im = @file_get_contents($smshost . '/im');//查询一下服务是否启动
         if ($im != '1') {
             $smshost = false;
-            $im = @file_get_contents($configsmshost . '/i');
-            if ($im == '1') {
-                $smshost = $configsmshost;
-            } else {
-                $smshost = false;
-            }
         }
 
-
         $data['smshost'] = $smshost;
-        $data['smsid'] = $this->session->userdata('session_id');
-        //sms center
+        $data['sessid'] = $this->session->userdata('session_id');
 
         exit(json_encode($data));
 
@@ -42,8 +33,8 @@ class Im extends MY_Controller
         $users = array();
         foreach ($alllist as $key => $row) {
             $alllist[$key]['iconCls'] = 'im_role';
-            $alllist[$key]['id']='z'.$row['id'];
-            $alllist[$key]['fid']='z'.$row['fid'];
+            $alllist[$key]['id'] = 'z' . $row['id'];
+            $alllist[$key]['fid'] = 'z' . $row['fid'];
 //          $alllist[$key]['state'] = 'closed';
             $alllist[$key]['children'] = $this->getRoleuser($row['id'], $users);
         }
@@ -51,17 +42,17 @@ class Im extends MY_Controller
         $tree = $this->tool->genTree($alllist, 'id', 'fid');
 
         $m = M('user');
-        $list = $m->fetAll('','id,realname,position');
-        $allusers=array();
-        foreach($list as $row){
-            $allusers[$row['id']]=$row;
+        $list = $m->fetAll('', 'id,realname,position');
+        $allusers = array();
+        foreach ($list as $row) {
+            $allusers[$row['id']] = $row;
         }
 
         $result = array(
             'tree' => $tree,
             'totaluser' => count($users),
             //'userids' => array_keys($users),
-            'allusers'=>$allusers,
+            'allusers' => $allusers,
         );
         exit(json_encode($result));
     }
@@ -75,7 +66,7 @@ class Im extends MY_Controller
     function getRoleuser($roleid = 0, &$users)
     {
         $m = M('user');
-        $list = $m->fetAll(" concat(',',department,',') like '%,{$roleid},%'", 'id,uname,realname,position');
+        $list = $m->fetAll(" concat(',',department,',') like '%,{$roleid},%'", 'id,uname,realname,position', "sort desc,id asc");
 
         $result = array();
 
@@ -127,22 +118,13 @@ class Im extends MY_Controller
             $result = array();
             $row = $m->getOne('select count(*) as num ' . $sql);
             $result['total'] = $row['num'];
-            $list = $m->getAll(' select j.jsid,j.fcid,m.fcname,m.ztitle,m.msg,m.fujian ' . $sql . ' order by j.id desc limit ' . $this->offset . ',' . $this->rows);
+            $list = $m->getAll(' select j.sid,j.jsid,j.fcid,m.fcname,m.ztitle,m.msg,m.fujian ' . $sql . ' order by j.id desc limit ' . $this->offset . ',' . $this->rows);
             $result['rows'] = $list;
 
             $this->datajson($result);
         } else {
-            $this->datajson();
+            $this->datajson(array('total'=>0,'rows'=>array()));
         }
-
-
-    }
-
-    function test()
-    {
-
-        //$data=@file_get_contents("http://127.0.0.1:8081/sendmsg/120/");
-
 
     }
 

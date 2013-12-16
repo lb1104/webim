@@ -1,49 +1,46 @@
-global.apppath = './app/';
-global.static = __dirname + '/static';
+var spawn = require('child_process').spawn,
+    date = require('dateformatter'),
+    fs = require('fs'),
+    server = null;
 
-var express = require('express'),
-    routes = require(global.apppath + 'routes'),
-    config = require(global.apppath + 'conf/config'),
-    app = express(),
-    server = require('http').createServer(app),
-    io = require('socket.io').listen(server);
+function startServer() {
+    console.log('start app');
+    server = spawn('node', [__dirname + '/app.js']);
+    server.stdout.on('data', function (data) {
+        log(data.toString());
+    });
+    server.stderr.on('data', function (data) {
+        log(data.toString());
+    });
+    server.on('close', function (code, signal) {
+        log('app exit code:' + code + "\n");
+        server.kill(signal);
+        restart();
+    });
+    server.on('error', function (code, signal) {
+        log('app error code:' + code + "\n");
+        server.kill(signal);
+        restart();
+    });
 
-app.disable('x-powered-by');
-
-app.set('port', '8081');
-
-app.set('views', global.apppath + 'v');
-
-app.engine('html', require('ejs').renderFile);
-
-app.set('view engine', 'html');
-
-
-app.use(express.favicon());
-app.use(express.compress());
-
-app.use(express.bodyParser());
-app.use(express.methodOverride());
-
-app.use(express.cookieParser());
-app.use(express.session({ secret: config.secret}));
-
-app.use('/static', express.static(global.static));
-
-app.use(express.logger('dev'));
-
-// development only
-if ('development' == app.get('env')) {
-    app.use(express.errorHandler());
 }
 
-routes(app,io);//路由
+function restart() {
+    console.log('restart app on after 5s');
+    setTimeout(startServer, 5000);
+}
 
-server.listen(app.get('port'), function () {
-    console.log('   express listening on port ' + app.get('port'));
-});
+function log(data) {
+    data = 'LOG(' + date.format('Y-m-d H:i:s') + ')\n' + data;
+    console.log(data);
+    fs.appendFile(
+        __dirname + '/log/info' + date.format('Y-m-d') + '.log',
+        data,
+        function (err) {
+            if (err) {
+                console.log(err);
+            }
+        });
+}
 
-
-io.set('log level', 1);//将socket.io中的debug信息关闭
-
-require(global.apppath + 'c/im')(app, io);
+startServer();

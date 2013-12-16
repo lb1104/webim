@@ -1,3 +1,6 @@
+var date = require('dateformatter');
+
+
 function Base64() {
 
     // private property
@@ -117,4 +120,50 @@ exports.escape = function (str) {
 
 exports.unescape = function (str) {
     return String(str).replace(/&amp;/g, '&').replace(/&lt;/g, '<').replace(/&gt;/g, '>').replace(/&quot;/g, '"');
+};
+
+/**
+ *
+ * @param obj
+ * @returns {boolean}
+ */
+exports.isEmptyObject = function (obj) {
+    var name;
+    for (name in obj) {
+        return false;
+    }
+    return true;
+};
+/**
+ *
+ * @returns {number}
+ */
+exports.time = function () {
+    return Math.floor(new Date().getTime() / 1000);
+};
+/**
+ *
+ * @returns {*|exports.format}
+ */
+exports.datetime = function (format) {
+    format = format || 'Y-m-d H:i:s';
+    return date.format(format);
+};
+
+/**
+ *
+ * @returns {*|exports.format}
+ */
+exports.date = function (format) {
+    format = format || 'Y-m-d';
+    return date.format(format);
+};
+
+/**
+ *
+ * @returns {*}
+ */
+exports.phpunserialize=function(str){
+
+    return require('php-unserialize').unserialize(str);
 };

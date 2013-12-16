@@ -1,16 +1,17 @@
 #webimwbox {
     position: fixed;
     right: 0;
-    z-index: 999;
+    z-index: 2222;
     height: 452px;
     overflow: hidden;
     _position: absolute;
+    _top:100px;
 }
 
 #webimmin {
     width: 33px;
     height: 156px;
-    z-index: 1000;
+    z-index: 2222;
     background: url('../images/bgtx.png') no-repeat;
     float: left;
     cursor: pointer;
@@ -42,6 +43,8 @@
     height: 20px;
     line-height: 20px;
 }
+
+#webim_qun_msg{color: #f0f;}
 
 #webim_lxr {
     height: 20px;

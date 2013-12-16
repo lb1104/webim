@@ -1,6 +1,6 @@
 {
     "name": "im",
-    "version": "0.0.1",
+    "version": "0.2.0",
     "private": true,
     "scripts": {
         "start": "node run.js"
@@ -11,6 +11,9 @@
         "express": "*",
         "mysql": "*",
         "php-unserialize": "*",
-        "socket.io": "*"
+        "socket.io": "*",
+        "node-windows":"*",
+        "iconv-lite":"*",
+        "underscore":"*"
     }
 }

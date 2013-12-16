@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>socket to websocket 测试</title>
+
+    <link href="/static/easyui/themes/default/easyui.css" rel="stylesheet" type="text/css"/>
+    <link href="/static/easyui/themes/icon.css" rel="stylesheet" type="text/css"/>
+
+    <script type="text/javascript" src="/static/js/jquery-1.8.3.min.js"></script>
+
+    <script type="text/javascript" src="/static/easyui/jquery.easyui.min.js"></script>
+    <script type="text/javascript" src="/static/easyui/window.js"></script>
+    <script type="text/javascript" src="/static/easyui/locale/easyui-lang-zh_CN.js"></script>
+
+    <script type="text/javascript">
+        var iohostname = 'http://' + location.hostname+':'+location.port;
+
+        $.getScript(iohostname + '/socket.io/socket.io.js', function () {
+
+            WebSms.init(iohostname);
+
+        });
+
+        var WebSms = (function () {
+
+            var result = {},socket = false,reloadok = false;
+
+            result.setok=function (ok) {
+                reloadok = ok;
+            };
+
+            function socketinit() {
+
+
+                socket.on('newsensor', function () {
+
+                    if ($('#autoreload').attr('checked')) {
+                        if (reloadok) {
+                            result.setok(false);
+                            $('#sensorgrid').datagrid('reload');
+
+                        }
+                    }
+
+                });
+
+                socket.on('message', function (data) {
+                    console.log(data);
+                });
+
+                socket.on('f5', function () {
+                    if (confirm("接收到服务端刷新请求!可能程序更新了,点击确定刷新!取消则不更新!")) {
+                        window.location.reload();
+                    }
+                });
+
+            }
+
+            result.init = function (iohostname) {
+
+                socket = io.connect(iohostname);
+                if (socket) {
+                    socketinit();
+                }
+
+            };
+
+            return result;
+
+        }());
+
+
+    </script>
+</head>
+
+<body>
+
+<table id='sensorgrid'>
+</table>
+<div id="sensortool">
+    <a href="/sensor_add" target="_blank" class="easyui-linkbutton" data-options="iconCls:'icon-add'">POST</a>
+    <a href="/sensorlist" target="_blank" class="easyui-linkbutton" data-options="iconCls:'icon-save'">历史数据</a>
+    <input type="checkbox" name="autoreload" id="autoreload" value="1" checked/><label for="autoreload">自动刷新</label>
+</div>
+
+<script type="text/javascript">
+    $('#sensorgrid').datagrid({
+        url: '/socketlist',
+        singleSelect: true,
+        rownumbers: true,
+        pagination: true,
+        pagePosition: 'top',
+        fitColumns: true,
+        fit: true,
+        pageSize: 20,
+        columns: [
+            [
+                {field: 'date', width: 150, title: '接收时间'},
+                {field: 'str', width: 400, title: '接收到的数据'},
+                {field: 'jsonok', width: 100, title: 'JSON解析'}
+            ]
+        ],
+        toolbar: '#sensortool',
+        onLoadSuccess: function () {
+            WebSms.setok(true);
+        }
+    });
+
+</script>
+</body>
+</html>
