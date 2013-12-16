@@ -27,7 +27,7 @@ exports.start = function () {
 
             for (var i = 0; i < buf.length;) {
 
-                if (buf[i] == 0x25 && buf[i + 1] == 0x10 && buf[i + 2] == 0x22) {
+                if (buf[i] == 0x25 && buf[i + 1] == 0x25 && buf[i + 2] == 0x24) {
                     var json = {};
                     switch (buf[i + 3]) {
                         case 0x01:
@@ -86,7 +86,7 @@ exports.start = function () {
 
             }
 
-            //25 10 22 04 01 01 01 01 25 10 22 04 00 01 01 01 25 10 22 02 00 01 01 11
+            //25 25 24 04 01 01 01 01
 
             //conn.end();
 
