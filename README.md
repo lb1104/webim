@@ -5,3 +5,4 @@ webim
 基本功能  
  1.信息的收发,提取webQQ的信息提示样式.  
  2.文件的发送
+ 3.socket 接收消息 转发websocket通知客户端
